@@ -6,7 +6,7 @@ var Arb={
 	"deg":0
 }
 function run(text){
-	
+	//alert(Arb.direction);
 	if(text=="turn left")
 	{
 	Arb.deg-=90;
@@ -151,31 +151,30 @@ window.onload=function(){
 	Tra("bottom");	
     }
 	document.getElementById('MovLeft').onclick=function(){   
-	if(Arb.direction==1) {text="turn left";}
-	else if(Arb.direction==2) {text="turn back";}
-	else if(Arb.direction==3) {text="turn right";}
-	run(text);	
+	if(Arb.direction==1) {text="turn left";run(text);}
+	else if(Arb.direction==2) {text="turn back";run(text);}
+	else if(Arb.direction==3) {text="turn right";run(text);}
+	
 	Tra("left");
     }
 	document.getElementById('MovRight').onclick=function(){   
-	if(Arb.direction==1) {text="turn right";}
-	else if(Arb.direction==0) {text="turn back";}
-	else if(Arb.direction==3) {text="turn left";}
-	run(text);	
+	if(Arb.direction==1) {text="turn right";run(text);}
+	else if(Arb.direction==0) {text="turn back";run(text);}
+	else if(Arb.direction==3) {text="turn left";run(text);}
+	
 	Tra("right");
     }
 	document.getElementById('MovTop').onclick=function(){   
-	if(Arb.direction==0) {text="turn right";}
-	else if(Arb.direction==3) {text="turn back";}
-	else if(Arb.direction==2) {text="turn left";}
-	run(text);	
+	if(Arb.direction==0) {text="turn right";run(text);}
+	else if(Arb.direction==3) {text="turn back";run(text);}
+	else if(Arb.direction==2) {text="turn left"; run(text);}
+	
 	Tra("top");
     }
 	document.getElementById('MovBot').onclick=function(){   
-	if(Arb.direction==2) {text="turn right";}
-	else if(Arb.direction==1) {text="turn back";}
-	else if(Arb.direction==0) {text="turn left";}
-	run(text);	
+	if(Arb.direction==2) {text="turn right"; run(text); }
+	else if(Arb.direction==1) {text="turn back"; run(text);}
+	else if(Arb.direction==0) {text="turn left"; run(text);}
 	Tra("bottom");
     }
 	
